@@ -780,7 +780,7 @@
                 <h2 class="text-4xl font-playfair font-bold mb-2 text-white">Engageons la conversation</h2>
                 <p class="text-brand-cream/70 mb-8">Un projet IA, une analyse de données complexe ou une conférence ? Laissez-moi un message direct ou consultez mes disponibilités.</p>
                 
-                <form name="contact" method="POST" data-netlify="true" class="space-y-6">
+                <form name="contact" method="POST" data-netlify="true" action="/success.html" class="space-y-6">
                     <div class="grid grid-cols-2 gap-6">
                         <div>
                             <label class="block text-xs uppercase text-brand-purple font-bold mb-1">Nom complet</label>
@@ -838,8 +838,9 @@
     <footer class="bg-[#060e20] pt-16 pb-8 border-t border-white/5 text-center relative z-10 text-brand-cream/50 text-sm">
         <p class="font-playfair text-lg text-white mb-2">CONSOLAS HODONOU</p>
         <p>AWARD / DSAWH Fellow 2025 • Cotonou, Benin</p>
-        <div class="mt-8">
-            © <span x-text="new Date().getFullYear()"></span> Consolas Hodonou.
+        <div class="mt-8 flex flex-col items-center gap-4">
+            <div>© <span x-text="new Date().getFullYear()"></span> Consolas Hodonou. Tous droits réservés.</div>
+            <a href="legal.html" class="text-[10px] uppercase tracking-[0.2em] hover:text-brand-purple transition-colors border-b border-white/10">Mentions Légales & Confidentialité</a>
         </div>
     </footer>
 

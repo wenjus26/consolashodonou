@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentions Légales | Consolas HODONOU</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            purple: '#d2bbff',
+                            night: '#0b1326',
+                            cream: '#dae2fd'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #0b1326; color: #dae2fd; font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="py-24 px-6">
+    <div class="max-w-3xl mx-auto">
+        <a href="index.html" class="inline-flex items-center gap-2 text-brand-purple hover:text-white transition-colors mb-12 text-sm font-bold uppercase tracking-widest">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+            Retour au site
+        </a>
+
+        <h1 class="text-4xl md:text-5xl font-playfair font-bold text-white mb-12">Mentions Légales & Confidentialité</h1>
+
+        <div class="space-y-12 text-brand-cream/70 leading-relaxed">
+            <section>
+                <h2 class="text-xl font-bold text-brand-purple mb-4 uppercase tracking-wider">1. Éditeur du Site</h2>
+                <p>Ce site est le portfolio professionnel de <strong>Consolas HODONOU</strong>, Data Scientist & Biostatisticienne basée à Cotonou, Bénin.</p>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-bold text-brand-purple mb-4 uppercase tracking-wider">2. Hébergement</h2>
+                <p>Le site est hébergé par <strong>Netlify, Inc.</strong><br>
+                Adresse : 512 2nd Street, Suite 200, San Francisco, CA 94107, USA.</p>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-bold text-brand-purple mb-4 uppercase tracking-wider">3. Propriété Intellectuelle</h2>
+                <p>L'ensemble de ce site (structure, textes, logos, et éléments interactifs) relève de la législation internationale sur le droit d'auteur. Tous les droits de reproduction sont réservés.</p>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-bold text-brand-purple mb-4 uppercase tracking-wider">4. Protection des Données</h2>
+                <p>Les informations collectées via le formulaire de contact sont utilisées exclusivement pour répondre à vos demandes professionnelles. Conformément au RGPD et aux lois béninoises sur le numérique, aucune donnée n'est cédée à des tiers.</p>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-bold text-brand-purple mb-4 uppercase tracking-wider">5. Cookies</h2>
+                <p>Ce site n'utilise aucun tracker publicitaire. Seuls des cookies techniques essentiels au bon fonctionnement de l'interface peuvent être générés temporairement.</p>
+            </section>
+
+            <div class="pt-12 border-t border-white/10 text-xs italic">
+                Dernière mise à jour : Avril 2026.
+            </div>
+        </div>
+    </div>
+</body>
+</html>

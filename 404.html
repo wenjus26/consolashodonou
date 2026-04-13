@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Donnée Introuvable | Consolas HODONOU</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            purple: '#d2bbff',
+                            night: '#0b1326',
+                            cream: '#dae2fd'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #0b1326; color: #dae2fd; font-family: 'Inter', sans-serif; overflow: hidden; }
+        .glitch { font-family: 'Playfair Display', serif; position: relative; }
+        .glitch::before, .glitch::after {
+            content: attr(data-text); position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+        }
+        .glitch::before { left: 2px; text-shadow: -2px 0 #d2bbff; clip: rect(44px, 450px, 56px, 0); animation: glitch-anim 5s infinite linear alternate-reverse; }
+        .glitch::after { left: -2px; text-shadow: -2px 0 #fff; clip: rect(44px, 450px, 56px, 0); animation: glitch-anim2 5s infinite linear alternate-reverse; }
+        @keyframes glitch-anim {
+            0% { clip: rect(31px, 9999px, 94px, 0); }
+            20% { clip: rect(52px, 9999px, 86px, 0); }
+            100% { clip: rect(67px, 9999px, 4px, 0); }
+        }
+        @keyframes glitch-anim2 {
+            0% { clip: rect(10px, 9999px, 85px, 0); }
+            100% { clip: rect(81px, 9999px, 14px, 0); }
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-6">
+    <!-- Particles bg -->
+    <canvas id="particles" class="absolute inset-0 z-0 opacity-30"></canvas>
+
+    <div class="relative z-10 text-center">
+        <h1 class="glitch text-[8rem] md:text-[12rem] font-bold text-white leading-none mb-4" data-text="404">404</h1>
+        <h2 class="text-2xl md:text-3xl font-playfair font-bold text-brand-purple mb-6">Erreur d'échantillonnage</h2>
+        <p class="max-w-md mx-auto text-brand-cream/60 mb-10 text-sm md:text-base leading-relaxed">
+            Désolé, la donnée que vous recherchez semble avoir été exclue du modèle. <br class="hidden md:block">
+            Elle n'existe plus ou a été déplacée vers un autre cluster.
+        </p>
+        
+        <a href="index.html" class="inline-flex items-center gap-3 bg-brand-purple text-brand-night px-8 py-4 rounded-full font-bold uppercase tracking-widest text-xs hover:bg-white hover:scale-105 transition-all duration-300 shadow-xl">
+            <i class="fa-solid fa-house"></i> Retour à l'accueil
+        </a>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('particles');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2;
+                this.speedX = (Math.random() - 0.5) * 0.5;
+                this.speedY = (Math.random() - 0.5) * 0.5;
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                if (this.x > canvas.width || this.x < 0) this.speedX *= -1;
+                if (this.y > canvas.height || this.y < 0) this.speedY *= -1;
+            }
+            draw() {
+                ctx.fillStyle = '#d2bbff';
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function init() {
+            for (let i = 0; i < 100; i++) {
+                particles.push(new Particle());
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+            requestAnimationFrame(animate);
+        }
+
+        init();
+        animate();
+
+        gsap.from(".glitch", { opacity: 0, y: 50, duration: 1.5, ease: "power4.out" });
+        gsap.from("p, a", { opacity: 0, duration: 1, delay: 0.5, stagger: 0.2 });
+    </script>
+</body>
+</html>
