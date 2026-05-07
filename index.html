@@ -325,7 +325,7 @@
     </nav>
 
     <!-- Hero Section with Parallax -->
-    <header class="relative min-h-screen flex items-center justify-center pt-28 px-6 overflow-hidden w-full" id="hero">
+    <header class="relative min-h-screen flex items-center justify-center pt-20 md:pt-28 px-4 md:px-6 overflow-hidden w-full" id="hero">
         <div class="absolute inset-0 bg-gradient-to-b from-[#0b1326]/50 to-[#0b1326] z-[-1]"></div>
 
         <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center z-10">
@@ -361,7 +361,7 @@
 
             <!-- Profile Image (Elite Parallax) -->
             <div class="relative reveal flex justify-center lg:justify-end mt-12 lg:mt-0" id="hero-img-layer">
-                <div class="relative w-72 h-[450px] md:w-[450px] md:h-[550px] group">
+                <div class="relative w-64 h-[400px] md:w-[450px] md:h-[550px] group">
                     <!-- Layer 1: Glow -->
                     <div class="absolute -inset-10 bg-brand-purple/20 rounded-full blur-3xl opacity-40 group-hover:opacity-60 transition-opacity duration-1000"></div>
                     
@@ -479,12 +479,12 @@
                         observer.observe(this.$el);
                     }
                 }">
-                    <pre class="font-mono text-brand-cream/80 m-0"><code x-text="displayedCode"></code><span class="animate-pulse border-r-4 border-brand-purple ml-1 inline-block h-4 align-middle"></span></pre>
+                    <pre class="font-mono text-brand-cream/80 m-0 whitespace-pre-wrap break-all"><code x-text="displayedCode"></code><span class="animate-pulse border-r-4 border-brand-purple ml-1 inline-block h-4 align-middle"></span></pre>
                 </div>
             </div>
 
             <!-- Key Metrics -->
-            <div class="grid grid-cols-2 gap-x-8 gap-y-12 reveal">
+            <div class="grid grid-cols-2 gap-x-4 md:gap-x-8 gap-y-10 md:gap-y-12 reveal">
                 <div class="flex flex-col border-l-4 border-brand-purple pl-6 py-1">
                     <div class="text-5xl md:text-6xl font-playfair font-bold text-white mb-2">500<span class="text-brand-purple">+</span></div>
                     <span class="text-brand-cream/70 text-xs md:text-sm uppercase tracking-widest font-bold" x-text="lang === 'fr' ? 'Femmes formées' : 'Women Trained'">Femmes formées</span>
@@ -759,7 +759,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Highlight 1 -->
-                <div class="glass-card p-8 rounded-3xl border border-brand-purple/30 bg-brand-purple/5 flex flex-col items-center text-center reveal hover:-translate-y-2 transition-all">
+                <div class="glass-card p-6 md:p-8 rounded-3xl border border-brand-purple/30 bg-brand-purple/5 flex flex-col items-center text-center reveal hover:-translate-y-2 transition-all">
                     <div class="w-16 h-16 rounded-full bg-brand-purple/20 flex items-center justify-center text-brand-purple mb-6">
                         <i class="fa-solid fa-trophy text-3xl"></i>
                     </div>
@@ -768,7 +768,7 @@
                 </div>
 
                 <!-- Highlight 2 -->
-                <div class="glass-card p-8 rounded-3xl border border-white/10 flex flex-col items-center text-center reveal hover:-translate-y-2 transition-all">
+                <div class="glass-card p-6 md:p-8 rounded-3xl border border-white/10 flex flex-col items-center text-center reveal hover:-translate-y-2 transition-all">
                     <div class="w-16 h-16 rounded-full bg-white/5 flex items-center justify-center text-white mb-6">
                         <i class="fa-solid fa-user-astronaut text-3xl"></i>
                     </div>
@@ -777,7 +777,7 @@
                 </div>
 
                 <!-- Highlight 3 -->
-                <div class="glass-card p-8 rounded-3xl border border-white/10 flex flex-col items-center text-center reveal hover:-translate-y-2 transition-all">
+                <div class="glass-card p-6 md:p-8 rounded-3xl border border-white/10 flex flex-col items-center text-center reveal hover:-translate-y-2 transition-all">
                     <div class="w-16 h-16 rounded-full bg-white/5 flex items-center justify-center text-white mb-6">
                         <i class="fa-solid fa-leaf text-3xl"></i>
                     </div>
@@ -786,7 +786,7 @@
                 </div>
 
                 <!-- Highlight 4 -->
-                <div class="glass-card p-8 rounded-3xl border border-brand-purple/30 bg-brand-purple/5 flex flex-col items-center text-center reveal hover:-translate-y-2 transition-all">
+                <div class="glass-card p-6 md:p-8 rounded-3xl border border-brand-purple/30 bg-brand-purple/5 flex flex-col items-center text-center reveal hover:-translate-y-2 transition-all">
                     <div class="w-16 h-16 rounded-full bg-brand-purple/20 flex items-center justify-center text-brand-purple mb-6">
                         <i class="fa-solid fa-users-viewfinder text-3xl"></i>
                     </div>
@@ -823,7 +823,7 @@
                             </div>
                         </div>
                     </a>
-                    <div class="p-8 relative flex-col flex bg-brand-nightDark h-full">
+                    <div class="p-6 md:p-8 relative flex-col flex bg-brand-nightDark h-full">
                         <div class="text-xs uppercase tracking-widest text-brand-cream/50 mb-2" x-text="lang === 'fr' ? 'Platforme Yieldlens' : 'Yieldlens Platform'">Platforme Yieldlens</div>
                         <h3 class="text-2xl font-playfair font-bold mb-3 text-white" x-text="lang === 'fr' ? 'Prediction de Rendement' : 'Yield Prediction'">Prediction de Rendement</h3>
                         <p class="text-brand-cream/70 text-sm mb-6 flex-grow" x-text="lang === 'fr' ? 'Coordination technique (AWARD Fellowship) pour prédire les rendements de maïs dans 5 pays.' : 'Technical coordination (AWARD Fellowship) to predict maize yields in 5 countries.'">Coordination technique (AWARD Fellowship) pour prédire les rendements de maïs dans 5 pays (Bénin, Kenya, Malawi, Ethiopie, Côte-d'Ivoire).</p>
@@ -850,7 +850,7 @@
                             </div>
                         </div>
                     </a>
-                    <div class="p-8 relative flex-col flex bg-brand-nightDark h-full">
+                    <div class="p-6 md:p-8 relative flex-col flex bg-brand-nightDark h-full">
                         <div class="text-xs uppercase tracking-widest text-brand-cream/50 mb-2" x-text="lang === 'fr' ? 'Coordination' : 'Coordination'">Coordination</div>
                         <h3 class="text-2xl font-playfair font-bold mb-3 text-white" x-text="lang === 'fr' ? 'Leadership ICPM' : 'ICPM Leadership'">Leadership ICPM</h3>
                         <p class="text-brand-cream/70 text-sm mb-6 flex-grow" x-text="lang === 'fr' ? 'Gestion stratégique et coordination de projets tech complexes, assurant synergie et respect des délais stricts.' : 'Strategic management and coordination of complex tech projects, ensuring synergy and meeting strict deadlines.'">Gestion stratégique et coordination de projets tech complexes, assurant synergie et respect des délais stricts.</p>
@@ -882,7 +882,7 @@
                             </div>
                         </div>
                     </a>
-                    <div class="p-8 relative flex-col flex bg-brand-nightDark h-full">
+                    <div class="p-6 md:p-8 relative flex-col flex bg-brand-nightDark h-full">
                         <div class="text-xs uppercase tracking-widest text-brand-cream/50 mb-2" x-text="lang === 'fr' ? 'Communauté' : 'Community'">Communauté</div>
                         <h3 class="text-2xl font-playfair font-bold mb-3 text-white" x-text="lang === 'fr' ? 'Tech’O Féminin' : 'Tech’O Féminin'">Tech’O Féminin</h3>
                         <p class="text-brand-cream/70 text-sm mb-6 flex-grow" x-text="lang === 'fr' ? 'Lead de la communauté. Encadrement, mentorat et promotion de l\'excellence technique féminine au Bénin.' : 'Community Lead. Guidance, mentoring, and promotion of female technical excellence in Benin.'">Lead de la communauté. Encadrement, mentorat et promotion de l'excellence technique féminine au Bénin.</p>
@@ -914,7 +914,7 @@
                             </div>
                         </div>
                     </a>
-                    <div class="p-8 relative flex-col flex bg-brand-nightDark h-full">
+                    <div class="p-6 md:p-8 relative flex-col flex bg-brand-nightDark h-full">
                         <div class="text-xs uppercase tracking-widest text-brand-cream/50 mb-2" x-text="lang === 'fr' ? 'Éducation' : 'Education'">Éducation</div>
                         <h3 class="text-2xl font-playfair font-bold mb-3 text-white" x-text="lang === 'fr' ? 'Women IA Academy' : 'Women IA Academy'">Women IA Academy</h3>
                         <p class="text-brand-cream/70 text-sm mb-6 flex-grow" x-text="lang === 'fr' ? 'Formatrice principale. Démystification des algorithmes de Machine Learning pour les jeunes femmes.' : 'Lead Trainer. Demystifying Machine Learning algorithms for young women.'">Formatrice principale. Démystification des algorithmes de Machine Learning pour les jeunes femmes.</p>
@@ -944,7 +944,7 @@
                             </div>
                         </div>
                     </a>
-                    <div class="p-8 relative flex-col flex bg-brand-nightDark h-full">
+                    <div class="p-6 md:p-8 relative flex-col flex bg-brand-nightDark h-full">
                         <div class="text-xs uppercase tracking-widest text-brand-cream/50 mb-2" x-text="lang === 'fr' ? 'Recherche & Conférence' : 'Research & Conference'">Recherche & Conférence</div>
                         <h3 class="text-2xl font-playfair font-bold mb-3 text-white" x-text="lang === 'fr' ? 'DeepLearning Indaba' : 'DeepLearning Indaba'">DeepLearning Indaba</h3>
                         <p class="text-brand-cream/70 text-sm mb-6 flex-grow" x-text="lang === 'fr' ? 'Participation active aux travaux de recherche africains en Deep Learning et intelligence artificielle distribuée.' : 'Active participation in African research work in Deep Learning and distributed artificial intelligence.'">Participation active aux travaux de recherche africains en Deep Learning et intelligence artificielle distribuée.</p>
@@ -976,7 +976,7 @@
                             </div>
                         </div>
                     </a>
-                    <div class="p-8 relative flex-col flex bg-brand-nightDark h-full">
+                    <div class="p-6 md:p-8 relative flex-col flex bg-brand-nightDark h-full">
                         <div class="text-xs uppercase tracking-widest text-brand-cream/50 mb-2" x-text="lang === 'fr' ? 'Data Analyse' : 'Data Analysis'">Data Analyse</div>
                         <h3 class="text-2xl font-playfair font-bold mb-3 text-white" x-text="lang === 'fr' ? 'Bilan WomenInSTEM' : 'WomenInSTEM Report'">Bilan WomenInSTEM</h3>
                         <p class="text-brand-cream/70 text-sm mb-6 flex-grow" x-text="lang === 'fr' ? 'Traitement statistique complet et dashboarding mesurant l\'impact des actions Women In STEM.' : 'Full statistical processing and dashboarding measuring the impact of Women In STEM actions.'">Traitement statistique complet et dashboarding mesurant l'impact des actions Women In STEM au niveau national.</p>
@@ -1028,7 +1028,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch max-w-5xl mx-auto">
                 
                 <!-- Service 1 -->
-                <div class="bg-[#171f33] rounded-xl p-8 border border-white/10 hover:border-brand-purple/50 transition-colors reveal flex flex-col">
+                <div class="bg-[#171f33] rounded-xl p-6 md:p-8 border border-white/10 hover:border-brand-purple/50 transition-colors reveal flex flex-col">
                     <h3 class="text-2xl font-playfair font-bold text-white mb-2" x-text="lang === 'fr' ? 'Consulting Data' : 'Data Consulting'">Consulting Data</h3>
                     <div class="text-3xl font-bold text-brand-purple mb-6">500€ <span class="text-sm font-normal text-brand-cream/50" x-text="lang === 'fr' ? '/projet' : '/project'">/projet</span></div>
                     <ul class="space-y-4 mb-8 flex-grow">
@@ -1040,7 +1040,7 @@
                 </div>
 
                 <!-- Service 2 (Mise en avant) -->
-                <div class="bg-brand-purple rounded-xl p-8 relative transform md:-translate-y-4 shadow-xl reveal flex flex-col text-brand-night">
+                <div class="bg-brand-purple rounded-xl p-6 md:p-8 relative transform md:-translate-y-4 shadow-xl reveal flex flex-col text-brand-night">
                     <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white text-brand-night px-4 py-1 text-xs font-bold uppercase rounded-full border border-gray-200" x-text="lang === 'fr' ? 'Le plus demandé' : 'Most Popular'">Le plus demandé</div>
                     <h3 class="text-2xl font-playfair font-bold text-brand-night mb-2" x-text="lang === 'fr' ? 'Formation IA & Data' : 'AI & Data Training'">Formation IA & Data</h3>
                     <div class="text-3xl font-bold text-brand-night mb-6">300€ <span class="text-sm font-normal text-brand-night/70" x-text="lang === 'fr' ? '/session' : '/session'">/session</span></div>
@@ -1054,7 +1054,7 @@
                 </div>
 
                 <!-- Service 3 -->
-                <div class="bg-[#171f33] rounded-xl p-8 border border-white/10 hover:border-brand-purple/50 transition-colors reveal flex flex-col">
+                <div class="bg-[#171f33] rounded-xl p-6 md:p-8 border border-white/10 hover:border-brand-purple/50 transition-colors reveal flex flex-col">
                     <h3 class="text-2xl font-playfair font-bold text-white mb-2" x-text="lang === 'fr' ? 'App Dev IA' : 'AI App Dev'">App Dev IA</h3>
                     <div class="text-3xl font-bold text-white mb-6" x-text="lang === 'fr' ? 'Sur Devis' : 'Quote Only'">Sur Devis</div>
                     <ul class="space-y-4 mb-8 flex-grow">
@@ -1215,7 +1215,7 @@
 
     <!-- Footer -->
     <footer class="bg-[#060e20] pt-16 pb-8 border-t border-white/5 text-center relative z-10 text-brand-cream/50 text-sm">
-        <p class="font-playfair text-xl text-white mb-2 uppercase tracking-tighter">Monsoï Consolas Névinas HODONOU</p>
+        <p class="font-playfair text-lg md:text-xl text-white mb-2 uppercase tracking-tighter px-4">Monsoï Consolas Névinas HODONOU</p>
         <p class="font-bold text-brand-purple/80 tracking-widest text-[10px] uppercase mb-4">AWARD / DSAWH Fellow 2025 • Cotonou, Benin</p>
         <div class="mt-8 flex flex-col items-center gap-4">
             <div class="flex gap-6 mb-4">
