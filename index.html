@@ -3,10 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consolas HODONOU | Data Scientist & Biostatisticienne | AWARD Fellow</title>
-    <!-- SEO -->
-    <meta name="description" content="Portfolio de Monsoï Consolas Névinas Hodonou, Data Scientist, Biostatisticienne et Formatrice IA. Fellow AWARD & DSAWH 2025, Lead Tech'O Féminin et Coordinatrice ICPM.">
+    <title>Consolas HODONOU | Biostatisticienne & Data Scientist | AWARD & DSAWH Fellow 2025</title>
+    <link rel="icon" type="image/png" href="assets/consolas_hero.png">
+    
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Consolas HODONOU | Biostatisticienne & Data Scientist | AWARD & DSAWH Fellow 2025">
+    <meta name="description" content="Découvrez le portfolio de Monsoï Consolas Névinas HODONOU, experte en Biostatistiques et Data Science. AWARD & DSAWH Fellow 2025, Ambassadrice IA & Leader Tech'O Féminin.">
     <meta name="keywords" content="Consolas Hodonou, Data Scientist Benin, Biostatistique, AI Trainer, AWARD Fellow, DSAWH, Yieldlens, Dóxà, Sèmè City, Cotonou, Femmes en STEM">
+    <meta name="author" content="Consolas HODONOU">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://consolashodonou.com/">
+    <meta property="og:title" content="Consolas HODONOU | Biostatisticienne & Data Scientist">
+    <meta property="og:description" content="Innovation inclusive et leadership technologique en Afrique. Expertise en IA, Santé et Agritech.">
+    <meta property="og:image" content="assets/consolas_hero.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://consolashodonou.com/">
+    <meta property="twitter:title" content="Consolas HODONOU | Biostatisticienne & Data Scientist">
+    <meta property="twitter:description" content="Innovation inclusive et leadership technologique en Afrique. Expertise en IA, Santé et Agritech.">
+    <meta property="twitter:image" content="assets/consolas_hero.png">
     
     <!-- Alpine JS for interactions -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
@@ -247,9 +265,11 @@
     <!-- Navbar -->
     <nav class="fixed w-full z-50 transition-all duration-300 backdrop-blur-lg bg-brand-night/80 border-b border-white/10" id="navbar">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="font-playfair text-2xl font-bold text-white tracking-wider flex items-center gap-2">
-                <span class="w-8 h-8 rounded bg-brand-purple flex items-center justify-center text-brand-night text-xs">CH</span>
-                Consolas Hodonou
+            <a href="#" class="font-playfair text-2xl font-bold text-white tracking-wider flex items-center gap-3">
+                <div class="relative">
+                    <span class="w-10 h-10 rounded-lg bg-brand-purple flex items-center justify-center text-brand-night text-sm shadow-[0_0_15px_rgba(210,187,255,0.4)]">CH</span>
+                    <img src="assets/consolas_hero.png" alt="Consolas Hodonou" class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full border-2 border-brand-night object-cover shadow-lg">
+                </div>
             </a>
             
             <div class="hidden md:flex gap-8 items-center font-inter text-sm font-medium">
@@ -264,7 +284,7 @@
                 </div>
             </div>
             
-            <a href="#contact" class="hidden md:block bg-brand-purple text-brand-night px-6 py-2 rounded-full font-semibold hover:bg-white transition-colors">
+            <a href="#contact" class="hidden md:block bg-brand-purple text-brand-night px-6 py-2 rounded-full font-semibold hover:bg-white transition-colors" x-text="lang === 'fr' ? 'Contact' : 'Contact'">
                 Contact
             </a>
 
@@ -284,12 +304,14 @@
              x-transition:leave-end="opacity-0 -translate-y-4 scale-95"
              class="md:hidden absolute top-[100%] left-0 w-full px-4 pb-4" style="display: none;">
              <div class="glass-card bg-brand-nightDark/95 border border-brand-purple/30 rounded-3xl p-6 shadow-2xl flex flex-col gap-5">
-                 <a href="#" @click="mobileMenuOpen = false" class="text-xl font-playfair font-bold text-white hover:text-brand-purple transition-colors border-b border-white/5 pb-3">Accueil</a>
-                 <a href="#about" @click="mobileMenuOpen = false" class="text-xl font-playfair font-bold text-white hover:text-brand-purple transition-colors border-b border-white/5 pb-3">Parcours</a>
-                 <a href="#skills" @click="mobileMenuOpen = false" class="text-xl font-playfair font-bold text-white hover:text-brand-purple transition-colors border-b border-white/5 pb-3">Compétences</a>
-                 <a href="#projects" @click="mobileMenuOpen = false" class="text-xl font-playfair font-bold text-white hover:text-brand-purple transition-colors border-b border-white/5 pb-3">Projets</a>
-                 <a href="#services" @click="mobileMenuOpen = false" class="text-xl font-playfair font-bold text-white hover:text-brand-purple transition-colors border-b border-white/5 pb-3">Services</a>
-                 <a href="#contact" @click="mobileMenuOpen = false" class="text-xl font-playfair font-bold text-brand-purple pb-2">Contactez-moi <i class="fa-solid fa-arrow-right-long text-sm align-middle ml-1"></i></a>
+                 <a href="#" @click="mobileMenuOpen = false" class="text-xl font-playfair font-bold text-white hover:text-brand-purple transition-colors border-b border-white/5 pb-3" x-text="lang === 'fr' ? 'Accueil' : 'Home'">Accueil</a>
+                 <a href="#about" @click="mobileMenuOpen = false" class="text-xl font-playfair font-bold text-white hover:text-brand-purple transition-colors border-b border-white/5 pb-3" x-text="lang === 'fr' ? 'Parcours' : 'Journey'">Parcours</a>
+                 <a href="#skills" @click="mobileMenuOpen = false" class="text-xl font-playfair font-bold text-white hover:text-brand-purple transition-colors border-b border-white/5 pb-3" x-text="lang === 'fr' ? 'Compétences' : 'Skills'">Compétences</a>
+                 <a href="#projects" @click="mobileMenuOpen = false" class="text-xl font-playfair font-bold text-white hover:text-brand-purple transition-colors border-b border-white/5 pb-3" x-text="lang === 'fr' ? 'Projets' : 'Projects'">Projets</a>
+                 <a href="#services" @click="mobileMenuOpen = false" class="text-xl font-playfair font-bold text-white hover:text-brand-purple transition-colors border-b border-white/5 pb-3" x-text="lang === 'fr' ? 'Services' : 'Services'">Services</a>
+                 <a href="#contact" @click="mobileMenuOpen = false" class="text-xl font-playfair font-bold text-brand-purple pb-2">
+                     <span x-text="lang === 'fr' ? 'Contactez-moi' : 'Contact Me'">Contactez-moi</span> <i class="fa-solid fa-arrow-right-long text-sm align-middle ml-1"></i>
+                 </a>
                  
                  <div class="flex items-center gap-4 mt-2">
                      <span class="text-xs text-brand-cream/50 uppercase tracking-widest">Langue</span>
@@ -315,16 +337,16 @@
 
                 <div class="mb-4 flex items-center justify-center md:justify-start gap-3">
                     <div class="h-[1px] w-8 bg-brand-purple opacity-50"></div>
-                    <span class="text-brand-purple font-black text-[9px] md:text-[10px] uppercase tracking-[0.4em]">Expertise de Haute Précision</span>
+                    <span class="text-brand-purple font-black text-[9px] md:text-[10px] uppercase tracking-[0.4em]" x-text="lang === 'fr' ? 'Expertise de Haute Précision' : 'Precision Expertise'">Expertise de Haute Précision</span>
                 </div>
                 <h1 class="font-playfair text-4xl md:text-5xl lg:text-7xl font-black leading-[1.1] md:leading-[1] mb-8 text-white tracking-tighter text-center md:text-left">
-                    L'IA au Service de <br>
-                    <span class="bg-gradient-to-r from-brand-purple via-white to-brand-purple bg-[length:200%_auto] animate-gradient-x bg-clip-text text-transparent italic px-1">l'Impact Social</span> <br>
-                    et Durable.
+                    <span x-text="lang === 'fr' ? 'L\'IA au Service de' : 'AI for'">L'IA au Service de</span> <br>
+                    <span class="bg-gradient-to-r from-brand-purple via-white to-brand-purple bg-[length:200%_auto] animate-gradient-x bg-clip-text text-transparent italic px-1" x-text="lang === 'fr' ? 'l\'Impact Social' : 'Social Impact'">l'Impact Social</span> <br>
+                    <span x-text="lang === 'fr' ? 'et Durable.' : '& Sustainability.'">et Durable.</span>
                 </h1>
                 <p class="text-lg md:text-xl text-brand-cream/80 font-inter font-light mb-10 max-w-xl leading-relaxed text-center md:text-left mx-auto md:mx-0">
-                    <span class="text-brand-purple font-bold">Monsoï Consolas Névinas HODONOU</span> — Biostatisticienne & Data Scientist. 
-                    <span class="text-white">AWARD & DSAWH 2025 Fellow</span>. Ambassadrice de l'innovation inclusive et du leadership technologique féminin en Afrique.
+                    <span class="text-brand-purple font-bold">Monsoï Consolas Névinas HODONOU</span> — 
+                    <span x-text="lang === 'fr' ? 'Biostatisticienne & Data Scientist. Fellow AWARD & DSAWH 2025. Ambassadrice de l\'innovation inclusive.' : 'Biostatistician & Data Scientist. 2025 AWARD & DSAWH Fellow. Ambassador for inclusive innovation.'">Biostatisticienne & Data Scientist. Fellow AWARD & DSAWH 2025. Ambassadrice de l'innovation inclusive.</span>
                 </p>
                 <div class="flex flex-wrap gap-6 justify-center md:justify-start">
                     <a href="#projects" class="bg-brand-purple text-brand-night px-8 py-4 rounded-full font-bold uppercase tracking-wider text-xs hover:bg-white transition-all shadow-lg">
@@ -345,18 +367,18 @@
                     
                     <!-- Layer 2: Main Image Frame -->
                     <div class="parallax-element absolute inset-0 rounded-[4rem] border-2 border-brand-purple/30 bg-gradient-to-br from-brand-purple/10 to-transparent backdrop-blur-md z-10 overflow-hidden" data-depth="0.1">
-                        <img src="assets/consolas_hero.png" alt="Consolas Hodonou" class="w-full h-full object-cover grayscale brightness-90 contrast-110 hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-110">
+                        <img src="assets/consolas_hero.png" alt="Monsoï Consolas Névinas HODONOU - Biostatisticienne & Data Scientist" class="w-full h-full object-cover grayscale brightness-90 contrast-110 hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-110">
                     </div>
 
                     <!-- Layer 3: Floating Tags -->
                     <div class="parallax-element absolute top-10 -left-8 md:-left-16 bg-white text-brand-night px-6 py-3 rounded-2xl text-[10px] font-black uppercase tracking-widest shadow-2xl z-20 flex items-center gap-3 border border-brand-purple/20" data-depth="0.3">
-                        <i class="fa-solid fa-microscope text-brand-purple"></i> Innovation
+                        <i class="fa-solid fa-microscope text-brand-purple"></i> <span x-text="lang === 'fr' ? 'Innovation' : 'Innovation'">Innovation</span>
                     </div>
                     <div class="parallax-element absolute top-1/2 -right-6 md:-right-12 bg-brand-nightDark text-white px-6 py-3 rounded-2xl text-[10px] font-black uppercase tracking-widest shadow-2xl z-20 flex items-center gap-3 border border-white/10" data-depth="0.5">
-                        <i class="fa-solid fa-dna text-brand-purple"></i> Biostatistiques
+                        <i class="fa-solid fa-dna text-brand-purple"></i> <span x-text="lang === 'fr' ? 'Biostatistiques' : 'Biostatistics'">Biostatistiques</span>
                     </div>
                     <div class="parallax-element absolute bottom-10 left-0 md:-left-8 bg-brand-purple text-brand-night px-6 py-3 rounded-2xl text-[10px] font-black uppercase tracking-widest shadow-2xl z-20 flex items-center gap-3" data-depth="0.4">
-                        <i class="fa-solid fa-users-gear"></i> Leadership
+                        <i class="fa-solid fa-users-gear"></i> <span x-text="lang === 'fr' ? 'Leadership' : 'Leadership'">Leadership</span>
                     </div>
                 </div>
             </div>
@@ -372,20 +394,20 @@
                 
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                     <div class="lg:col-span-5 reveal">
-                        <h2 class="text-3xl md:text-5xl font-playfair font-bold text-white leading-tight mb-6">
-                            Expertise à l'intersection de la <span class="text-brand-purple italic">Recherche</span>, de la <span class="text-brand-purple italic">Tech</span> et de l'Impact.
+                        <h2 class="text-3xl md:text-5xl font-playfair font-bold text-white leading-tight mb-6" x-text="lang === 'fr' ? 'Expertise à l\'intersection de la Recherche, de la Tech et de l\'Impact.' : 'Expertise at the Intersection of Research, Tech, and Impact.'">
+                            Expertise à l'intersection de la Recherche, de la Tech et de l'Impact.
                         </h2>
                         <div class="flex gap-4">
                             <div class="w-12 h-[2px] bg-brand-purple mt-4"></div>
-                            <p class="text-brand-cream/50 text-xs uppercase font-black tracking-widest">Résumé Exécutif</p>
+                            <p class="text-brand-cream/50 text-xs uppercase font-black tracking-widest" x-text="lang === 'fr' ? 'Résumé Exécutif' : 'Executive Summary'">Résumé Exécutif</p>
                         </div>
                     </div>
                     <div class="lg:col-span-7 reveal">
-                        <p class="text-lg md:text-xl text-brand-cream/80 font-light leading-relaxed mb-8">
-                            Je suis une <span class="text-white font-bold">Biostatisticienne, Data Scientist et Formatrice en Intelligence Artificielle</span> passionnée par l'utilisation des données et de la technologie pour stimuler une innovation significative et inclusive. 
+                        <p class="text-lg md:text-xl text-brand-cream/80 font-light leading-relaxed mb-8" x-text="lang === 'fr' ? 'Je suis une Biostatisticienne, Data Scientist et Formatrice en Intelligence Artificielle passionnée par l\'utilisation des données et de la technologie pour stimuler une innovation significative et inclusive.' : 'I am a Biostatistician, Data Scientist, and AI Trainer passionate about using data and technology to drive meaningful and inclusive innovation.'">
+                            Je suis une Biostatisticienne, Data Scientist et Formatrice en Intelligence Artificielle passionnée par l'utilisation des données et de la technologie pour stimuler une innovation significative et inclusive. 
                         </p>
-                        <p class="text-brand-cream/70 leading-relaxed mb-8">
-                            Avec de solides compétences en programmation (Python et R), analyse de données et machine learning, j'œuvre à la pointe de la recherche technologique. En tant que <span class="text-white">Directrice Technique chez ICT4U</span> et <span class="text-white">Coordonnatrice Générale de l'ICPM</span>, je soutiens des initiatives tech-driven pour promouvoir l'excellence et la participation des femmes dans les STEM.
+                        <p class="text-brand-cream/70 leading-relaxed mb-8" x-text="lang === 'fr' ? 'Avec de solides compétences en programmation (Python et R), analyse de données et machine learning, j\'œuvre à la pointe de la recherche technologique. En tant que Directrice Technique chez ICT4U et Coordonnatrice Générale de l\'ICPM, je soutiens des initiatives tech-driven pour promouvoir l\'excellence et la participation des femmes dans les STEM.' : 'With strong skills in programming (Python and R), data analysis, and machine learning, I work at the leading edge of technological research. As Technical Director at ICT4U and General Coordinator of ICPM, I support tech-driven initiatives to promote excellence and women\'s participation in STEM.'">
+                            Avec de solides compétences en programmation (Python et R), analyse de données et machine learning, j'œuvre à la pointe de la recherche technologique. En tant que Directrice Technique chez ICT4U et Coordonnatrice Générale de l'ICPM, je soutiens des initiatives tech-driven pour promouvoir l'excellence et la participation des femmes dans les STEM.
                         </p>
                         <div class="flex flex-wrap gap-4">
                             <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-[10px] font-black uppercase text-brand-cream/60">Biostatistics MSc</span>
@@ -490,7 +512,7 @@
                 <h2 class="text-3xl md:text-5xl font-playfair font-bold text-white">
                     <span x-text="lang === 'fr' ? 'Trajectoire & Impact' : 'Trajectory & Impact'">Trajectoire & Impact</span>
                 </h2>
-                <p class="text-brand-cream/70 mt-4 max-w-2xl mx-auto">Une évolution guidée par la rigueur scientifique et l'ambition de façonner un leadership tech inclusif en Afrique.</p>
+                <p class="text-brand-cream/70 mt-4 max-w-2xl mx-auto" x-text="lang === 'fr' ? 'Une évolution guidée par la rigueur scientifique et l\'ambition de façonner un leadership tech inclusif en Afrique.' : 'An evolution guided by scientific rigor and the ambition to shape inclusive tech leadership in Africa.'">Une évolution guidée par la rigueur scientifique et l'ambition de façonner un leadership tech inclusif en Afrique.</p>
             </div>
 
             <div class="relative pt-10">
@@ -506,13 +528,13 @@
                                 </div>
                                 <h3 class="text-3xl font-playfair text-white m-0">2025 - 2026</h3>
                             </div>
-                            <p class="font-bold text-lg mt-2 text-white">AWARD Fellowship & Sèmè City</p>
-                            <p class="font-bold text-brand-purple mt-1 text-sm md:text-right">Team Lead Yieldlens | Chargée de Projet Valorisation Tech</p>
+                            <p class="font-bold text-lg mt-2 text-white" x-text="lang === 'fr' ? 'AWARD Fellowship & Sèmè City' : 'AWARD Fellowship & Sèmè City'">AWARD Fellowship & Sèmè City</p>
+                            <p class="font-bold text-brand-purple mt-1 text-sm md:text-right" x-text="lang === 'fr' ? 'Team Lead Yieldlens | Chargée de Projet Valorisation Tech' : 'Team Lead Yieldlens | Tech Valorization Project Manager'">Team Lead Yieldlens | Chargée de Projet Valorisation Tech</p>
                             <div class="flex gap-2 flex-wrap md:justify-end mt-3 mb-3">
-                                <span class="px-3 py-1 bg-brand-nightDark border border-brand-purple text-[10px] font-bold uppercase rounded-full text-brand-purple">Yieldlens Deploy</span>
-                                <span class="px-3 py-1 bg-brand-nightDark border border-white/20 text-[10px] font-bold uppercase rounded-full text-white">NASA Mentor</span>
+                                <span class="px-3 py-1 bg-brand-nightDark border border-brand-purple text-[10px] font-bold uppercase rounded-full text-brand-purple" x-text="lang === 'fr' ? 'Yieldlens Déployé' : 'Yieldlens Deployed'">Yieldlens Deploy</span>
+                                <span class="px-3 py-1 bg-brand-nightDark border border-white/20 text-[10px] font-bold uppercase rounded-full text-white" x-text="lang === 'fr' ? 'Mentor NASA' : 'NASA Mentor'">NASA Mentor</span>
                             </div>
-                            <p class="text-brand-cream/70 text-sm leading-relaxed">Pilotage de projets de valorisation technologique en IA et mentorat galactique lors du NASA Space Apps Challenge.</p>
+                            <p class="text-brand-cream/70 text-sm leading-relaxed" x-text="lang === 'fr' ? 'Pilotage de projets de valorisation technologique en IA et mentorat galactique lors du NASA Space Apps Challenge.' : 'Steering tech valorization projects in AI and galactic mentoring during the NASA Space Apps Challenge.'">Pilotage de projets de valorisation technologique en IA et mentorat galactique lors du NASA Space Apps Challenge.</p>
                         </div>
                     </div>
                     <div class="absolute left-6 md:left-1/2 min-w-6 w-6 h-6 rounded-full bg-white border-[5px] border-brand-night transform -translate-x-1/2 z-10 transition-transform duration-300"></div>
@@ -531,13 +553,13 @@
                                 </div>
                                 <h3 class="text-3xl font-playfair text-brand-purple m-0">2024</h3>
                             </div>
-                            <p class="font-bold text-lg mt-2 text-white">Master en Biostatistique & Dóxà</p>
-                            <p class="font-bold text-brand-cream/60 mt-1 text-sm">Diplômée LABEF/UAC | Co-fondatrice Dóxà</p>
+                            <p class="font-bold text-lg mt-2 text-white" x-text="lang === 'fr' ? 'Master en Biostatistique & Dóxà' : 'Master in Biostatistics & Dóxà'">Master en Biostatistique & Dóxà</p>
+                            <p class="font-bold text-brand-cream/60 mt-1 text-sm" x-text="lang === 'fr' ? 'Diplômée LABEF/UAC | Co-fondatrice Dóxà' : 'LABEF/UAC Graduate | Dóxà Co-founder'">Diplômée LABEF/UAC | Co-fondatrice Dóxà</p>
                             <div class="flex gap-2 flex-wrap mt-2 mb-3">
-                                <span class="px-3 py-1 bg-brand-nightDark border border-white/5 text-[10px] font-bold uppercase rounded-full text-brand-cream/80">SDA Afrique Instructrice</span>
-                                <span class="px-3 py-1 bg-[#171f33] border border-brand-purple/20 text-[10px] font-bold uppercase rounded-full text-brand-purple">Women EdTech DS</span>
+                                <span class="px-3 py-1 bg-brand-nightDark border border-white/5 text-[10px] font-bold uppercase rounded-full text-brand-cream/80" x-text="lang === 'fr' ? 'SDA Afrique Instructrice' : 'SDA Africa Instructor'">SDA Afrique Instructrice</span>
+                                <span class="px-3 py-1 bg-[#171f33] border border-brand-purple/20 text-[10px] font-bold uppercase rounded-full text-brand-purple" x-text="lang === 'fr' ? 'Women EdTech DS' : 'Women EdTech DS'">Women EdTech DS</span>
                             </div>
-                            <p class="text-brand-cream/70 text-sm leading-relaxed">Conception d'une plateforme d'IA pour les droits des femmes et déploiement de l'application de santé mentale Dóxà.</p>
+                            <p class="text-brand-cream/70 text-sm leading-relaxed" x-text="lang === 'fr' ? 'Conception d\'une plateforme d\'IA pour les droits des femmes et déploiement de l\'application de santé mentale Dóxà.' : 'Design of an AI platform for women\'s rights and deployment of the Dóxà mental health app.'">Conception d'une plateforme d'IA pour les droits des femmes et déploiement de l'application de santé mentale Dóxà.</p>
                         </div>
                     </div>
                 </div>
@@ -554,13 +576,13 @@
                                     <h3 class="text-3xl font-playfair text-brand-cream m-0">2018 - 2022</h3>
                                 </div>
                             </div>
-                            <p class="font-bold text-lg mt-2 text-white">Major de Promotion | Agronomie</p>
+                            <p class="font-bold text-lg mt-2 text-white" x-text="lang === 'fr' ? 'Major de Promotion | Agronomie' : 'Valedictorian | Agronomy'">Major de Promotion | Agronomie</p>
                             <div class="flex flex-wrap gap-2 md:justify-end mt-2 mb-3">
-                                <span class="px-3 py-1 bg-brand-nightDark border border-white/5 text-[10px] font-bold uppercase rounded-full text-brand-cream/80">
+                                <span class="px-3 py-1 bg-brand-nightDark border border-white/5 text-[10px] font-bold uppercase rounded-full text-brand-cream/80" x-text="lang === 'fr' ? 'Université de Parakou' : 'University of Parakou'">
                                     Université de Parakou
                                 </span>
                             </div>
-                            <p class="text-brand-cream/70 text-sm leading-relaxed">Excellence académique sanctionnée par le titre de Major de Promotion. Début de la recherche au LARDES sur les services climatiques.</p>
+                            <p class="text-brand-cream/70 text-sm leading-relaxed" x-text="lang === 'fr' ? 'Excellence académique sanctionnée par le titre de Major de Promotion. Début de la recherche au LARDES sur les services climatiques.' : 'Academic excellence crowned with the Valedictorian title. Start of research at LARDES on climate services.'">Excellence académique sanctionnée par le titre de Major de Promotion. Début de la recherche au LARDES sur les services climatiques.</p>
                         </div>
                     </div>
                     <div class="absolute left-6 md:left-1/2 min-w-5 w-5 h-5 rounded-full bg-brand-cream border-[4px] border-brand-night transform -translate-x-1/2 z-10 transition-transform duration-300"></div>
@@ -574,7 +596,7 @@
     <section id="skills" class="py-24 bg-brand-nightDark/50 border-t border-brand-purple/20 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16 reveal">
-                <h2 class="text-4xl md:text-5xl font-playfair font-bold text-white mb-4">Architecture de Compétences</h2>
+                <h2 class="text-4xl md:text-5xl font-playfair font-bold text-white mb-4" x-text="lang === 'fr' ? 'Architecture de Compétences' : 'Skills Architecture'">Architecture de Compétences</h2>
                 <div class="h-1 w-24 bg-brand-purple mx-auto"></div>
             </div>
 
@@ -588,8 +610,8 @@
                         <i class="fa-solid fa-arrow-up-right text-brand-cream/20 group-hover:text-brand-purple transition-colors"></i>
                     </div>
                     <div>
-                        <h3 class="text-xl font-bold text-white mb-2">Machine Learning & IA</h3>
-                        <p class="text-sm text-brand-cream/60">Régression, Forêts Aléatoires, Clusters & Deep Learning distribué.</p>
+                        <h3 class="text-xl font-bold text-white mb-2" x-text="lang === 'fr' ? 'Machine Learning & IA' : 'Machine Learning & AI'">Machine Learning & IA</h3>
+                        <p class="text-sm text-brand-cream/60" x-text="lang === 'fr' ? 'Régression, Forêts Aléatoires, Clusters & Deep Learning distribué.' : 'Regression, Random Forests, Clusters & Distributed Deep Learning.'">Régression, Forêts Aléatoires, Clusters & Deep Learning distribué.</p>
                     </div>
                 </div>
 
@@ -599,8 +621,8 @@
                         <i class="fa-solid fa-calculator text-2xl"></i>
                     </div>
                     <div>
-                        <h3 class="text-xl font-bold text-white mb-2">Biostatistiques</h3>
-                        <p class="text-sm text-brand-cream/60">Maîtrise de R & Python pour l'analyse de santé.</p>
+                        <h3 class="text-xl font-bold text-white mb-2" x-text="lang === 'fr' ? 'Biostatistiques' : 'Biostatistics'">Biostatistiques</h3>
+                        <p class="text-sm text-brand-cream/60" x-text="lang === 'fr' ? 'Maîtrise de R & Python pour l\'analyse de santé.' : 'Mastery of R & Python for health analysis.'">Maîtrise de R & Python pour l'analyse de santé.</p>
                     </div>
                 </div>
 
@@ -635,15 +657,15 @@
                    <div class="flex items-center gap-4 text-brand-purple mb-4">
                         <i class="fa-solid fa-language text-3xl"></i>
                    </div>
-                   <h3 class="text-lg font-bold text-white">Linguistique</h3>
+                   <h3 class="text-lg font-bold text-white" x-text="lang === 'fr' ? 'Linguistique' : 'Linguistics'">Linguistique</h3>
                    <div class="space-y-2 mt-4">
                        <div class="flex justify-between text-xs font-bold uppercase tracking-widest text-brand-cream/60">
-                           <span>Français / Anglais</span>
+                           <span x-text="lang === 'fr' ? 'Français / Anglais' : 'French / English'">Français / Anglais</span>
                            <span class="text-brand-purple">C2 / B2</span>
                        </div>
                        <div class="flex justify-between text-xs font-bold uppercase tracking-widest text-brand-cream/60">
-                           <span>Fongbé</span>
-                           <span class="text-brand-purple">Natif</span>
+                           <span x-text="lang === 'fr' ? 'Fongbé' : 'Fongbe'">Fongbé</span>
+                           <span class="text-brand-purple" x-text="lang === 'fr' ? 'Natif' : 'Native'">Natif</span>
                        </div>
                    </div>
                 </div>
@@ -779,7 +801,7 @@
     <section id="projects" class="py-24 relative z-10">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16 reveal">
-                <h2 class="text-4xl md:text-5xl font-playfair font-bold mb-4 text-white">Actions & Réalisations</h2>
+                <h2 class="text-4xl md:text-5xl font-playfair font-bold mb-4 text-white" x-text="lang === 'fr' ? 'Actions & Réalisations' : 'Actions & Achievements'">Actions & Réalisations</h2>
                 <div class="h-1 w-24 bg-brand-purple mx-auto"></div>
             </div>
 
@@ -802,12 +824,12 @@
                         </div>
                     </a>
                     <div class="p-8 relative flex-col flex bg-brand-nightDark h-full">
-                        <div class="text-xs uppercase tracking-widest text-brand-cream/50 mb-2">Platforme Yieldlens</div>
-                        <h3 class="text-2xl font-playfair font-bold mb-3 text-white">Prediction de Rendement</h3>
-                        <p class="text-brand-cream/70 text-sm mb-6 flex-grow">Coordination technique (AWARD Fellowship) pour prédire les rendements de maïs dans 5 pays (Bénin, Kenya, Malawi, Ethiopie, Côte-d'Ivoire).</p>
+                        <div class="text-xs uppercase tracking-widest text-brand-cream/50 mb-2" x-text="lang === 'fr' ? 'Platforme Yieldlens' : 'Yieldlens Platform'">Platforme Yieldlens</div>
+                        <h3 class="text-2xl font-playfair font-bold mb-3 text-white" x-text="lang === 'fr' ? 'Prediction de Rendement' : 'Yield Prediction'">Prediction de Rendement</h3>
+                        <p class="text-brand-cream/70 text-sm mb-6 flex-grow" x-text="lang === 'fr' ? 'Coordination technique (AWARD Fellowship) pour prédire les rendements de maïs dans 5 pays.' : 'Technical coordination (AWARD Fellowship) to predict maize yields in 5 countries.'">Coordination technique (AWARD Fellowship) pour prédire les rendements de maïs dans 5 pays (Bénin, Kenya, Malawi, Ethiopie, Côte-d'Ivoire).</p>
                         <div class="flex gap-2 mt-2 h-11">
                             <a href="https://maizeyieldprediction-ck3buyu9yfykbz84szx5tp.streamlit.app/" target="_blank" class="flex-[4] flex justify-center items-center gap-2 rounded-lg bg-brand-purple text-brand-night text-[10px] font-black uppercase tracking-widest hover:bg-white transition-all duration-300">
-                                Ouvrir Yieldlens <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                <span x-text="lang === 'fr' ? 'Ouvrir Yieldlens' : 'Open Yieldlens'">Ouvrir Yieldlens</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
                             </a>
                         </div>
                     </div>
@@ -829,12 +851,12 @@
                         </div>
                     </a>
                     <div class="p-8 relative flex-col flex bg-brand-nightDark h-full">
-                        <div class="text-xs uppercase tracking-widest text-brand-cream/50 mb-2">Coordination</div>
-                        <h3 class="text-2xl font-playfair font-bold mb-3 text-white">ICPM Leadership</h3>
-                        <p class="text-brand-cream/70 text-sm mb-6 flex-grow">Gestion stratégique et coordination de projets tech complexes, assurant synergie et respect des délais stricts.</p>
+                        <div class="text-xs uppercase tracking-widest text-brand-cream/50 mb-2" x-text="lang === 'fr' ? 'Coordination' : 'Coordination'">Coordination</div>
+                        <h3 class="text-2xl font-playfair font-bold mb-3 text-white" x-text="lang === 'fr' ? 'Leadership ICPM' : 'ICPM Leadership'">Leadership ICPM</h3>
+                        <p class="text-brand-cream/70 text-sm mb-6 flex-grow" x-text="lang === 'fr' ? 'Gestion stratégique et coordination de projets tech complexes, assurant synergie et respect des délais stricts.' : 'Strategic management and coordination of complex tech projects, ensuring synergy and meeting strict deadlines.'">Gestion stratégique et coordination de projets tech complexes, assurant synergie et respect des délais stricts.</p>
                         <div class="flex gap-2 mt-2 h-11">
                             <a href="#" class="flex-[4] flex justify-center items-center gap-2 rounded-lg bg-white/10 border border-white/20 text-white text-[10px] font-black uppercase tracking-widest hover:bg-brand-purple hover:text-brand-night hover:border-brand-purple transition-all duration-300">
-                                Lire le rapport <i class="fa-solid fa-file-pdf"></i>
+                                <span x-text="lang === 'fr' ? 'Lire le rapport' : 'Read report'">Lire le rapport</span> <i class="fa-solid fa-file-pdf"></i>
                             </a>
                             <a href="#" class="flex-1 flex justify-center items-center rounded-lg border border-white/10 text-brand-cream/40 hover:text-white hover:border-white transition-all duration-300" title="Documents">
                                 <i class="fa-solid fa-folder-open text-lg"></i>
@@ -861,12 +883,12 @@
                         </div>
                     </a>
                     <div class="p-8 relative flex-col flex bg-brand-nightDark h-full">
-                        <div class="text-xs uppercase tracking-widest text-brand-cream/50 mb-2">Communauté</div>
-                        <h3 class="text-2xl font-playfair font-bold mb-3 text-white">Tech’O Féminin</h3>
-                        <p class="text-brand-cream/70 text-sm mb-6 flex-grow">Lead de la communauté. Encadrement, mentorat et promotion de l'excellence technique féminine au Bénin.</p>
+                        <div class="text-xs uppercase tracking-widest text-brand-cream/50 mb-2" x-text="lang === 'fr' ? 'Communauté' : 'Community'">Communauté</div>
+                        <h3 class="text-2xl font-playfair font-bold mb-3 text-white" x-text="lang === 'fr' ? 'Tech’O Féminin' : 'Tech’O Féminin'">Tech’O Féminin</h3>
+                        <p class="text-brand-cream/70 text-sm mb-6 flex-grow" x-text="lang === 'fr' ? 'Lead de la communauté. Encadrement, mentorat et promotion de l\'excellence technique féminine au Bénin.' : 'Community Lead. Guidance, mentoring, and promotion of female technical excellence in Benin.'">Lead de la communauté. Encadrement, mentorat et promotion de l'excellence technique féminine au Bénin.</p>
                         <div class="flex gap-2 mt-2 h-11">
                             <a href="#" class="flex-[4] flex justify-center items-center gap-2 rounded-lg bg-brand-purple text-brand-night text-[10px] font-black uppercase tracking-widest hover:bg-white transition-all duration-300">
-                                Découvrir <i class="fa-solid fa-external-link"></i>
+                                <span x-text="lang === 'fr' ? 'Découvrir' : 'Discover'">Découvrir</span> <i class="fa-solid fa-external-link"></i>
                             </a>
                             <a href="#" class="flex-1 flex justify-center items-center rounded-lg border border-white/10 text-brand-cream/40 hover:text-white hover:border-white transition-all duration-300">
                                 <i class="fa-brands fa-linkedin text-lg"></i>
@@ -893,12 +915,12 @@
                         </div>
                     </a>
                     <div class="p-8 relative flex-col flex bg-brand-nightDark h-full">
-                        <div class="text-xs uppercase tracking-widest text-brand-cream/50 mb-2">Éducation</div>
-                        <h3 class="text-2xl font-playfair font-bold mb-3 text-white">Women IA Academy</h3>
-                        <p class="text-brand-cream/70 text-sm mb-6 flex-grow">Formatrice principale. Démystification des algorithmes de Machine Learning pour les jeunes femmes.</p>
+                        <div class="text-xs uppercase tracking-widest text-brand-cream/50 mb-2" x-text="lang === 'fr' ? 'Éducation' : 'Education'">Éducation</div>
+                        <h3 class="text-2xl font-playfair font-bold mb-3 text-white" x-text="lang === 'fr' ? 'Women IA Academy' : 'Women IA Academy'">Women IA Academy</h3>
+                        <p class="text-brand-cream/70 text-sm mb-6 flex-grow" x-text="lang === 'fr' ? 'Formatrice principale. Démystification des algorithmes de Machine Learning pour les jeunes femmes.' : 'Lead Trainer. Demystifying Machine Learning algorithms for young women.'">Formatrice principale. Démystification des algorithmes de Machine Learning pour les jeunes femmes.</p>
                         <div class="flex gap-2 mt-2 h-11">
                             <a href="#" class="flex-[4] flex justify-center items-center gap-2 rounded-lg bg-white/10 border border-white/20 text-white text-[10px] font-black uppercase tracking-widest hover:bg-brand-purple hover:text-brand-night hover:border-brand-purple transition-all duration-300">
-                                Les cohortes <i class="fa-solid fa-users"></i>
+                                <span x-text="lang === 'fr' ? 'Les cohortes' : 'Cohorts'">Les cohortes</span> <i class="fa-solid fa-users"></i>
                             </a>
                             <a href="#" class="flex-1 flex justify-center items-center rounded-lg border border-white/10 text-brand-cream/40 hover:text-white hover:border-white transition-all duration-300">
                                 <i class="fa-solid fa-calendar-days text-lg"></i>
@@ -923,12 +945,12 @@
                         </div>
                     </a>
                     <div class="p-8 relative flex-col flex bg-brand-nightDark h-full">
-                        <div class="text-xs uppercase tracking-widest text-brand-cream/50 mb-2">Recherche & Conférence</div>
-                        <h3 class="text-2xl font-playfair font-bold mb-3 text-white">DeepLearning Indaba</h3>
-                        <p class="text-brand-cream/70 text-sm mb-6 flex-grow">Participation active aux travaux de recherche africains en Deep Learning et intelligence artificielle distribuée.</p>
+                        <div class="text-xs uppercase tracking-widest text-brand-cream/50 mb-2" x-text="lang === 'fr' ? 'Recherche & Conférence' : 'Research & Conference'">Recherche & Conférence</div>
+                        <h3 class="text-2xl font-playfair font-bold mb-3 text-white" x-text="lang === 'fr' ? 'DeepLearning Indaba' : 'DeepLearning Indaba'">DeepLearning Indaba</h3>
+                        <p class="text-brand-cream/70 text-sm mb-6 flex-grow" x-text="lang === 'fr' ? 'Participation active aux travaux de recherche africains en Deep Learning et intelligence artificielle distribuée.' : 'Active participation in African research work in Deep Learning and distributed artificial intelligence.'">Participation active aux travaux de recherche africains en Deep Learning et intelligence artificielle distribuée.</p>
                         <div class="flex gap-2 mt-2 h-11">
                             <a href="#" class="flex-[4] flex justify-center items-center gap-2 rounded-lg bg-brand-purple text-brand-night text-[10px] font-black uppercase tracking-widest hover:bg-white transition-all duration-300">
-                                Lire <i class="fa-solid fa-book-open"></i>
+                                <span x-text="lang === 'fr' ? 'Lire' : 'Read'">Lire</span> <i class="fa-solid fa-book-open"></i>
                             </a>
                             <a href="#" class="flex-1 flex justify-center items-center rounded-lg border border-white/10 text-brand-cream/40 hover:text-white hover:border-white transition-all duration-300">
                                 <i class="fa-solid fa-microscope text-lg"></i>
@@ -955,12 +977,12 @@
                         </div>
                     </a>
                     <div class="p-8 relative flex-col flex bg-brand-nightDark h-full">
-                        <div class="text-xs uppercase tracking-widest text-brand-cream/50 mb-2">Data Analyse</div>
-                        <h3 class="text-2xl font-playfair font-bold mb-3 text-white">Bilan WomenInSTEM</h3>
-                        <p class="text-brand-cream/70 text-sm mb-6 flex-grow">Traitement statistique complet et dashboarding mesurant l'impact des actions Women In STEM au niveau national.</p>
+                        <div class="text-xs uppercase tracking-widest text-brand-cream/50 mb-2" x-text="lang === 'fr' ? 'Data Analyse' : 'Data Analysis'">Data Analyse</div>
+                        <h3 class="text-2xl font-playfair font-bold mb-3 text-white" x-text="lang === 'fr' ? 'Bilan WomenInSTEM' : 'WomenInSTEM Report'">Bilan WomenInSTEM</h3>
+                        <p class="text-brand-cream/70 text-sm mb-6 flex-grow" x-text="lang === 'fr' ? 'Traitement statistique complet et dashboarding mesurant l\'impact des actions Women In STEM.' : 'Full statistical processing and dashboarding measuring the impact of Women In STEM actions.'">Traitement statistique complet et dashboarding mesurant l'impact des actions Women In STEM au niveau national.</p>
                         <div class="flex gap-2 mt-2 h-11">
                             <a href="#" class="flex-[4] flex justify-center items-center gap-2 rounded-lg bg-white/10 border border-white/20 text-white text-[10px] font-black uppercase tracking-widest hover:bg-brand-purple hover:text-brand-night hover:border-brand-purple transition-all duration-300">
-                                Analyse Live <i class="fa-solid fa-chart-line"></i>
+                                <span x-text="lang === 'fr' ? 'Analyse Live' : 'Live Analysis'">Analyse Live</span> <i class="fa-solid fa-chart-line"></i>
                             </a>
                             <a href="#" class="flex-1 flex justify-center items-center rounded-lg border border-white/10 text-brand-cream/40 hover:text-white hover:border-white transition-all duration-300">
                                 <i class="fa-solid fa-database text-lg"></i>
@@ -998,49 +1020,49 @@
     <!-- Services (Pricing) -->
     <section id="services" class="py-24 bg-brand-nightDark/80 z-10 relative">
         <div class="max-w-7xl mx-auto px-6">
-             <div class="text-center mb-16 reveal">
-                <h2 class="text-4xl md:text-5xl font-playfair font-bold mb-4 text-white">Expertise à la demande</h2>
-                <p class="text-brand-cream/80 uppercase tracking-widest text-sm">Consulting • Formation • Développement</p>
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl md:text-5xl font-playfair font-bold mb-4 text-white" x-text="lang === 'fr' ? 'Expertise à la demande' : 'Expertise on Demand'">Expertise à la demande</h2>
+                <p class="text-brand-cream/80 uppercase tracking-widest text-sm" x-text="lang === 'fr' ? 'Consulting • Formation • Développement' : 'Consulting • Training • Development'">Consulting • Formation • Développement</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch max-w-5xl mx-auto">
                 
                 <!-- Service 1 -->
                 <div class="bg-[#171f33] rounded-xl p-8 border border-white/10 hover:border-brand-purple/50 transition-colors reveal flex flex-col">
-                    <h3 class="text-2xl font-playfair font-bold text-white mb-2">Consulting Data</h3>
-                    <div class="text-3xl font-bold text-brand-purple mb-6">500€ <span class="text-sm font-normal text-brand-cream/50">/projet</span></div>
+                    <h3 class="text-2xl font-playfair font-bold text-white mb-2" x-text="lang === 'fr' ? 'Consulting Data' : 'Data Consulting'">Consulting Data</h3>
+                    <div class="text-3xl font-bold text-brand-purple mb-6">500€ <span class="text-sm font-normal text-brand-cream/50" x-text="lang === 'fr' ? '/projet' : '/project'">/projet</span></div>
                     <ul class="space-y-4 mb-8 flex-grow">
-                        <li class="flex items-start gap-2 text-sm text-brand-cream/80"><span class="material-symbols-outlined text-brand-purple text-lg">check_circle</span> Analyse exploratoire des données</li>
-                        <li class="flex items-start gap-2 text-sm text-brand-cream/80"><span class="material-symbols-outlined text-brand-purple text-lg">check_circle</span> Modélisation Biostatistique (R/Python)</li>
-                        <li class="flex items-start gap-2 text-sm text-brand-cream/80"><span class="material-symbols-outlined text-brand-purple text-lg">check_circle</span> Visualisation & Reporting décisionnel</li>
+                        <li class="flex items-start gap-2 text-sm text-brand-cream/80"><span class="material-symbols-outlined text-brand-purple text-lg">check_circle</span> <span x-text="lang === 'fr' ? 'Analyse exploratoire des données' : 'Exploratory data analysis'">Analyse exploratoire des données</span></li>
+                        <li class="flex items-start gap-2 text-sm text-brand-cream/80"><span class="material-symbols-outlined text-brand-purple text-lg">check_circle</span> <span x-text="lang === 'fr' ? 'Modélisation Biostatistique (R/Python)' : 'Biostatistical Modeling (R/Python)'">Modélisation Biostatistique (R/Python)</span></li>
+                        <li class="flex items-start gap-2 text-sm text-brand-cream/80"><span class="material-symbols-outlined text-brand-purple text-lg">check_circle</span> <span x-text="lang === 'fr' ? 'Visualisation & Reporting décisionnel' : 'Visualization & Decision Reporting'">Visualisation & Reporting décisionnel</span></li>
                     </ul>
-                    <a href="#contact" class="w-full block text-center py-3 rounded bg-brand-nightDark border border-brand-purple text-brand-purple hover:bg-brand-purple hover:text-white transition-colors font-bold">Réserver</a>
+                    <a href="#contact" class="w-full block text-center py-3 rounded bg-brand-nightDark border border-brand-purple text-brand-purple hover:bg-brand-purple hover:text-white transition-colors font-bold" x-text="lang === 'fr' ? 'Réserver' : 'Book Now'">Réserver</a>
                 </div>
 
                 <!-- Service 2 (Mise en avant) -->
                 <div class="bg-brand-purple rounded-xl p-8 relative transform md:-translate-y-4 shadow-xl reveal flex flex-col text-brand-night">
-                    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white text-brand-night px-4 py-1 text-xs font-bold uppercase rounded-full border border-gray-200">Le plus demandé</div>
-                    <h3 class="text-2xl font-playfair font-bold text-brand-night mb-2">Formation IA & Data</h3>
-                    <div class="text-3xl font-bold text-brand-night mb-6">300€ <span class="text-sm font-normal text-brand-night/70">/session</span></div>
+                    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white text-brand-night px-4 py-1 text-xs font-bold uppercase rounded-full border border-gray-200" x-text="lang === 'fr' ? 'Le plus demandé' : 'Most Popular'">Le plus demandé</div>
+                    <h3 class="text-2xl font-playfair font-bold text-brand-night mb-2" x-text="lang === 'fr' ? 'Formation IA & Data' : 'AI & Data Training'">Formation IA & Data</h3>
+                    <div class="text-3xl font-bold text-brand-night mb-6">300€ <span class="text-sm font-normal text-brand-night/70" x-text="lang === 'fr' ? '/session' : '/session'">/session</span></div>
                     <ul class="space-y-4 mb-8 flex-grow">
-                        <li class="flex items-start gap-2 text-sm font-medium"><span class="material-symbols-outlined text-brand-night text-lg">check_circle</span> Masterclasses Python Data Science</li>
-                        <li class="flex items-start gap-2 text-sm font-medium"><span class="material-symbols-outlined text-brand-night text-lg">check_circle</span> Initiation au Machine Learning Algorithmique</li>
-                        <li class="flex items-start gap-2 text-sm font-medium"><span class="material-symbols-outlined text-brand-night text-lg">check_circle</span> Sessions de mentorat personnalisé</li>
-                        <li class="flex items-start gap-2 text-sm font-medium"><span class="material-symbols-outlined text-brand-night text-lg">check_circle</span> Focus sur l'IA Éthique</li>
+                        <li class="flex items-start gap-2 text-sm font-medium"><span class="material-symbols-outlined text-brand-night text-lg">check_circle</span> <span x-text="lang === 'fr' ? 'Masterclasses Python Data Science' : 'Python Data Science Masterclasses'">Masterclasses Python Data Science</span></li>
+                        <li class="flex items-start gap-2 text-sm font-medium"><span class="material-symbols-outlined text-brand-night text-lg">check_circle</span> <span x-text="lang === 'fr' ? 'Initiation au Machine Learning' : 'Intro to Machine Learning'">Initiation au Machine Learning Algorithmique</span></li>
+                        <li class="flex items-start gap-2 text-sm font-medium"><span class="material-symbols-outlined text-brand-night text-lg">check_circle</span> <span x-text="lang === 'fr' ? 'Sessions de mentorat' : 'Mentoring Sessions'">Sessions de mentorat personnalisé</span></li>
+                        <li class="flex items-start gap-2 text-sm font-medium"><span class="material-symbols-outlined text-brand-night text-lg">check_circle</span> <span x-text="lang === 'fr' ? 'Focus sur l\'IA Éthique' : 'Focus on Ethical AI'">Focus sur l'IA Éthique</span></li>
                     </ul>
-                    <a href="#contact" class="w-full block text-center py-3 rounded bg-brand-night text-white font-bold hover:bg-black transition-colors">Rejoindre l'Académie</a>
+                    <a href="#contact" class="w-full block text-center py-3 rounded bg-brand-night text-white font-bold hover:bg-black transition-colors" x-text="lang === 'fr' ? 'Rejoindre l\'Académie' : 'Join Academy'">Rejoindre l'Académie</a>
                 </div>
 
                 <!-- Service 3 -->
                 <div class="bg-[#171f33] rounded-xl p-8 border border-white/10 hover:border-brand-purple/50 transition-colors reveal flex flex-col">
-                    <h3 class="text-2xl font-playfair font-bold text-white mb-2">App Dev IA</h3>
-                    <div class="text-3xl font-bold text-white mb-6">Sur Devis</div>
+                    <h3 class="text-2xl font-playfair font-bold text-white mb-2" x-text="lang === 'fr' ? 'App Dev IA' : 'AI App Dev'">App Dev IA</h3>
+                    <div class="text-3xl font-bold text-white mb-6" x-text="lang === 'fr' ? 'Sur Devis' : 'Quote Only'">Sur Devis</div>
                     <ul class="space-y-4 mb-8 flex-grow">
-                        <li class="flex items-start gap-2 text-sm text-brand-cream/80"><span class="material-symbols-outlined text-white text-lg">check_circle</span> Développement custom d'applications web</li>
-                        <li class="flex items-start gap-2 text-sm text-brand-cream/80"><span class="material-symbols-outlined text-white text-lg">check_circle</span> Intégration de modèles NLP/LLM</li>
-                        <li class="flex items-start gap-2 text-sm text-brand-cream/80"><span class="material-symbols-outlined text-white text-lg">check_circle</span> Architecture orientée Data & Santé (MVP complet)</li>
+                        <li class="flex items-start gap-2 text-sm text-brand-cream/80"><span class="material-symbols-outlined text-white text-lg">check_circle</span> <span x-text="lang === 'fr' ? 'Développement web custom' : 'Custom web development'">Développement custom d'applications web</span></li>
+                        <li class="flex items-start gap-2 text-sm text-brand-cream/80"><span class="material-symbols-outlined text-white text-lg">check_circle</span> <span x-text="lang === 'fr' ? 'Intégration de modèles NLP' : 'NLP Models Integration'">Intégration de modèles NLP/LLM</span></li>
+                        <li class="flex items-start gap-2 text-sm text-brand-cream/80"><span class="material-symbols-outlined text-white text-lg">check_circle</span> <span x-text="lang === 'fr' ? 'Architecture orientée Data' : 'Data-oriented Architecture'">Architecture orientée Data & Santé (MVP complet)</span></li>
                     </ul>
-                    <a href="#contact" class="w-full block text-center py-3 rounded bg-brand-night border border-white/50 text-white hover:bg-white hover:text-black transition-colors font-bold">Discuter du projet</a>
+                    <a href="#contact" class="w-full block text-center py-3 rounded bg-brand-night border border-white/50 text-white hover:bg-white hover:text-black transition-colors font-bold" x-text="lang === 'fr' ? 'Discuter du projet' : 'Let\'s Discuss'">Discuter du projet</a>
                 </div>
 
             </div>
@@ -1051,14 +1073,29 @@
     <section class="py-24 relative z-10" x-data="{
         currentIndex: 0,
         items: [
-            { text: '« Consolas possède de solides compétences en modélisation statistique, en analyse de données et en programmation. Elle est intelligente, travailleuse et capable de mener des recherches avec rigueur et innovation. »', author: 'Pr. Romain Glèlè Kakaï', role: 'Full Professor in Biometry', type: 'Recommandation' },
-            { text: '« Ses compétences techniques, son leadership et son engagement en faveur de l’éducation en IA font d’elle une candidate remarquable. Elle est une formatrice appréciée au sein de notre École d’Été (EEIA). »', author: 'Dr. Esperan Padonou', role: 'Dr in Mathematics', type: 'Recommandation' },
-            { text: '« #100motspourunjour : L\'inclusion dans l\'IA ne se décrète pas, elle se code. Chaque ligne de Python écrite par une jeune fille est une victoire contre le déterminisme technologique. »', author: 'Consolas Hodonou', role: 'Lead Tech\'O Féminin', type: 'Vision' }
+            { 
+                text: lang === 'fr' ? '« Consolas possède de solides compétences en modélisation statistique, en analyse de données et en programmation. Elle est intelligente, travailleuse et capable de mener des recherches avec rigueur et innovation. »' : '« Consolas has strong skills in statistical modeling, data analysis, and programming. She is intelligent, hardworking, and capable of conducting research with rigor and innovation. »', 
+                author: 'Pr. Romain Glèlè Kakaï', 
+                role: lang === 'fr' ? 'Professeur Titulaire en Biométrie' : 'Full Professor in Biometry', 
+                type: lang === 'fr' ? 'Recommandation' : 'Recommendation' 
+            },
+            { 
+                text: lang === 'fr' ? '« Ses compétences techniques, son leadership et son engagement en faveur de l’éducation en IA font d’elle une candidate remarquable. Elle est une formatrice appréciée au sein de notre École d’Été (EEIA). »' : '« Her technical skills, leadership, and commitment to AI education make her a remarkable candidate. She is a valued trainer at our Summer School (EEIA). »', 
+                author: 'Dr. Esperan Padonou', 
+                role: lang === 'fr' ? 'Dr en Mathématiques' : 'Dr in Mathematics', 
+                type: lang === 'fr' ? 'Recommandation' : 'Recommendation' 
+            },
+            { 
+                text: lang === 'fr' ? '« #100motspourunjour : L\'inclusion dans l\'IA ne se décrète pas, elle se code. Chaque ligne de Python écrite par une jeune fille est une victoire contre le déterminisme technologique. »' : '« #100motspourunjour: Inclusion in AI is not decreed, it is coded. Every line of Python written by a girl is a victory against technological determinism. »', 
+                author: 'Consolas Hodonou', 
+                role: lang === 'fr' ? 'Lead Tech\'O Féminin' : 'Lead Tech\'O Féminin', 
+                type: lang === 'fr' ? 'Vision' : 'Vision' 
+            }
         ],
         next() { this.currentIndex = (this.currentIndex + 1) % this.items.length },
         prev() { this.currentIndex = (this.currentIndex - 1 + this.items.length) % this.items.length }
     }">
-        <div class="max-w-4xl mx-auto px-6 text-center reveal">
+        <div class="max-w-4xl mx-auto px-6 text-center reveal relative">
             <div class="mb-4">
                 <span class="material-symbols-outlined text-5xl text-brand-purple opacity-50">format_quote</span>
             </div>
@@ -1096,7 +1133,9 @@
                 email: '', 
                 message: '',
                 sendWhatsApp() {
-                    const text = `Bonjour Consolas, je suis ${this.name} (${this.email}). ${this.message}`;
+                    const textFr = `Bonjour Consolas, je suis ${this.name} (${this.email}). ${this.message}`;
+                    const textEn = `Hello Consolas, I am ${this.name} (${this.email}). ${this.message}`;
+                    const text = lang === 'fr' ? textFr : textEn;
                     window.open(`https://wa.me/2290167191225?text=${encodeURIComponent(text)}`, '_blank');
                 },
                 sendEmail() {
@@ -1105,23 +1144,23 @@
                     window.location.href = `mailto:nevinashodonou@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
                 }
             }">
-                <h2 class="text-4xl font-playfair font-bold mb-2 text-white">Engageons la conversation</h2>
-                <p class="text-brand-cream/70 mb-8">Remplissez ces quelques lignes et choisissez votre canal de communication préféré.</p>
+                <h2 class="text-4xl font-playfair font-bold mb-2 text-white" x-text="lang === 'fr' ? 'Engageons la conversation' : 'Let\'s Start a Conversation'">Engageons la conversation</h2>
+                <p class="text-brand-cream/70 mb-8" x-text="lang === 'fr' ? 'Remplissez ces quelques lignes et choisissez votre canal de communication préféré.' : 'Fill in these few lines and choose your preferred communication channel.'">Remplissez ces quelques lignes et choisissez votre canal de communication préféré.</p>
                 
                 <div class="space-y-6">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                            <label class="block text-xs uppercase text-brand-purple font-bold mb-1">Nom complet</label>
-                            <input type="text" x-model="name" placeholder="Votre nom..." class="w-full bg-transparent border-b border-white/20 px-0 py-2 focus:outline-none focus:border-brand-purple transition-colors text-brand-cream">
+                            <label class="block text-xs uppercase text-brand-purple font-bold mb-1" x-text="lang === 'fr' ? 'Nom complet' : 'Full Name'">Nom complet</label>
+                            <input type="text" x-model="name" :placeholder="lang === 'fr' ? 'Votre nom...' : 'Your name...'" class="w-full bg-transparent border-b border-white/20 px-0 py-2 focus:outline-none focus:border-brand-purple transition-colors text-brand-cream">
                         </div>
                         <div>
-                            <label class="block text-xs uppercase text-brand-purple font-bold mb-1">Email</label>
+                            <label class="block text-xs uppercase text-brand-purple font-bold mb-1" x-text="lang === 'fr' ? 'Email' : 'Email'">Email</label>
                             <input type="email" x-model="email" placeholder="votre@email.com" class="w-full bg-transparent border-b border-white/20 px-0 py-2 focus:outline-none focus:border-brand-purple transition-colors text-brand-cream">
                         </div>
                     </div>
                     <div>
-                        <label class="block text-xs uppercase text-brand-purple font-bold mb-1">Votre Message</label>
-                        <textarea x-model="message" rows="3" placeholder="Décrivez votre projet ou question..." class="w-full bg-transparent border-b border-white/20 px-0 py-2 focus:outline-none focus:border-brand-purple transition-colors text-brand-cream resize-none"></textarea>
+                        <label class="block text-xs uppercase text-brand-purple font-bold mb-1" x-text="lang === 'fr' ? 'Votre Message' : 'Your Message'">Votre Message</label>
+                        <textarea x-model="message" rows="3" :placeholder="lang === 'fr' ? 'Décrivez votre projet ou question...' : 'Describe your project or question...'" class="w-full bg-transparent border-b border-white/20 px-0 py-2 focus:outline-none focus:border-brand-purple transition-colors text-brand-cream resize-none"></textarea>
                     </div>
                     
                     <div class="flex flex-col md:flex-row gap-4 pt-4">
@@ -1160,9 +1199,9 @@
                 <!-- Calendly Embed Mock -->
                 <div class="glass-card rounded-xl p-6 flex-1 flex flex-col justify-center items-center text-center">
                     <span class="material-symbols-outlined text-4xl text-brand-purple mb-4">calendar_month</span>
-                    <h3 class="text-xl font-bold mb-2 text-white">Réserver une consultation</h3>
-                    <p class="text-sm text-brand-cream/70 mb-6">Planifiez un appel vidéo direct via Calendly.</p>
-                    <button class="px-6 py-2 border border-brand-purple text-brand-purple rounded hover:bg-brand-purple hover:text-brand-night transition-colors font-bold text-sm" onclick="alert('Module Calendly Integré ici')">Ouvrir Calendly</button>
+                    <h3 class="text-xl font-bold mb-2 text-white" x-text="lang === 'fr' ? 'Réserver une consultation' : 'Book a consultation'">Réserver une consultation</h3>
+                    <p class="text-sm text-brand-cream/70 mb-6" x-text="lang === 'fr' ? 'Planifiez un appel vidéo direct via Calendly.' : 'Schedule a direct video call via Calendly.'">Planifiez un appel vidéo direct via Calendly.</p>
+                    <button class="px-6 py-2 border border-brand-purple text-brand-purple rounded hover:bg-brand-purple hover:text-brand-night transition-colors font-bold text-sm" onclick="alert('Module Calendly Integré ici')" x-text="lang === 'fr' ? 'Ouvrir Calendly' : 'Open Calendly'">Ouvrir Calendly</button>
                 </div>
 
                 <!-- Google Map Embedded Cotonou -->
@@ -1184,8 +1223,8 @@
                 <a href="https://github.com/Consolashodonou" class="hover:text-brand-purple transition-colors"><i class="fa-brands fa-github text-lg"></i></a>
                 <a href="mailto:nevinashodonou@gmail.com" class="hover:text-brand-purple transition-colors"><i class="fa-solid fa-envelope text-lg"></i></a>
             </div>
-            <div>© <span x-text="new Date().getFullYear()"></span> Consolas Hodonou. Tous droits réservés.</div>
-            <a href="legal.html" class="text-[10px] uppercase tracking-[0.2em] hover:text-brand-purple transition-colors border-b border-white/10">Mentions Légales & Confidentialité</a>
+            <div>© <span x-text="new Date().getFullYear()"></span> Consolas Hodonou. <span x-text="lang === 'fr' ? 'Tous droits réservés.' : 'All rights reserved.'">Tous droits réservés.</span></div>
+            <a href="legal.html" class="text-[10px] uppercase tracking-[0.2em] hover:text-brand-purple transition-colors border-b border-white/10" x-text="lang === 'fr' ? 'Mentions Légales & Confidentialité' : 'Legal Mentions & Privacy'">Mentions Légales & Confidentialité</a>
         </div>
     </footer>
 
@@ -1214,13 +1253,13 @@
                  </div>
                  <div>
                      <h4 class="font-bold text-white text-sm">Consolas AI</h4>
-                     <p class="text-[10px] text-brand-cream/60 uppercase tracking-widest">Trained on my CV</p>
+                     <p class="text-[10px] text-brand-cream/60 uppercase tracking-widest" x-text="lang === 'fr' ? 'Entraînée sur mon parcours' : 'Trained on my CV'">Trained on my CV</p>
                  </div>
              </div>
 
              <!-- Chat Body -->
              <div class="p-4 h-64 overflow-y-auto flex flex-col gap-4 text-sm" id="chatbox">
-                 <div class="bg-white/5 border border-white/10 rounded-xl rounded-tl-none p-3 text-brand-cream/80 w-11/12">
+                 <div class="bg-white/5 border border-white/10 rounded-xl rounded-tl-none p-3 text-brand-cream/80 w-11/12" x-text="lang === 'fr' ? 'Bonjour ! Je suis l\'IA de Consolas. Que souhaitez-vous savoir sur son expertise ?' : 'Hello! I am Consolas\' AI. What would you like to know about her expertise?'">
                      Bonjour ! Je suis l'IA de Consolas. Que souhaitez-vous savoir sur son expertise en Data Science ?
                  </div>
                  <!-- User Prompts -->
@@ -1241,8 +1280,8 @@
                          }, 600);
                      }
                  }" class="flex flex-col gap-2 mt-auto pt-4">
-                     <button @click="ask('Quelles sont ses compétences techniques ?', 'Consolas excelle en Python, R, SPSS, STATA, Machine Learning et Biostatistiques.')" class="text-xs border border-brand-purple/30 hover:bg-brand-purple hover:text-brand-night text-brand-purple rounded-full px-3 py-2 text-left transition-colors">Quelles sont ses compétences techniques ?</button>
-                     <button @click="ask('Quel est son impact social ?', 'Elle est coordinatrice ICPM, Lead Tech\'O Féminin, et Fellow AWARD 2025 avec le projet Yieldlens.')" class="text-xs border border-brand-purple/30 hover:bg-brand-purple hover:text-brand-night text-brand-purple rounded-full px-3 py-2 text-left transition-colors">Quel est son impact social ?</button>
+                     <button @click="lang === 'fr' ? ask('Quelles sont ses compétences ?', 'Consolas excelle en Python, R, Machine Learning et Biostatistiques.') : ask('What are her skills?', 'Consolas excels in Python, R, Machine Learning, and Biostatistics.')" class="text-xs border border-brand-purple/30 hover:bg-brand-purple hover:text-brand-night text-brand-purple rounded-full px-3 py-2 text-left transition-colors" x-text="lang === 'fr' ? 'Ses compétences ?' : 'Her skills?'">Quelles sont ses compétences techniques ?</button>
+                     <button @click="lang === 'fr' ? ask('Quel est son impact ?', 'Elle est coordinatrice ICPM, Lead Tech\'O Féminin, et Fellow AWARD 2025.') : ask('What is her impact?', 'She is ICPM coordinator, Tech\'O Féminin Lead, and 2025 AWARD Fellow.')" class="text-xs border border-brand-purple/30 hover:bg-brand-purple hover:text-brand-night text-brand-purple rounded-full px-3 py-2 text-left transition-colors" x-text="lang === 'fr' ? 'Son impact social ?' : 'Social impact?'">Quel est son impact social ?</button>
                  </div>
              </div>
         </div>
